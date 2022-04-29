@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js">
+    </script>
+    <title>ADAS</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-left-img">
+        <img src="assets/Path21.png" alt="" />
+      </div>
+      <div class="content">
+        <div class="header">
+          <div class="left">
+            <div class="element icon">
+              <div class="img">
+                <img src="assets/car.png" alt="" />
+              </div>
+            </div>
+            <div class="element"><p>Home</p></div>
+            <div class="element"><p>Vehicle tracker</p></div>
+            <div class="element"><p>About us</p></div>
+          </div>
+          <div class="right">
+            <div class="btn"><p>Login</p></div>
+            <div class="element icon">
+              <div class="img">
+                <img src="assets/astronaut.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="left-content">
+          <p class="head-content">24/7 Tracker</p>
+          <p class="body-content">
+            AI based Model for Pedestrian Detection with Emergency Braking
+            Control simulated by CARLA
+          </p>
+          <div class="buttons">
+            <div class="btn dark"><p>START TRACKING</p></div>
+            <div class="gap"></div>
+            <div class="btn light"><p>LEARN MORE</p></div>
+          </div>
+        </div>
+
+        <div class="car-image">
+          <div class="car">
+            <div class="img">
+              <img src="assets/Group 52.png" alt="" />
+            </div>
+          </div>
+          <div class="car-surroundings">
+            <div class="img">
+              <img src="assets/Group 28.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="path2">
+          <div class="img"><img src="assets/Path 459.png" alt="" /></div>
+        </div>
+
+        <div class="circles-section">
+          <div class="circle-section end">
+            <div class="head">
+              <p>Speed</p>
+            </div>
+            <div class="circle">
+              <p id="speed"><%= speed %></p>
+            </div>
+          </div>
+
+          <div class="circle-section">
+            <div class="head">
+              <p>Status</p>
+            </div>
+            <div class="circle">
+              <p id="status"><%= status %></p>
+            </div>
+          </div>
+
+          <div class="circle-section end">
+            <div class="head">
+              <p>Error Code</p>
+            </div>
+            <div class="circle">
+              <p id="errorCode"><%= errorCode %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="path3">
+          <div class="img"><img src="assets/Path 602.png" alt="" /></div>
+        </div>
+
+        <div class="about-us">
+          <div class="about-head">
+            <p>About us</p>
+            <div></div>
+          </div>
+          <div class="flex-section">
+            <div class="img"><img src="assets/Group 1359.png" alt="" /></div>
+            <div class="text">
+              <p>
+                AI based Model for Pedestrian Detection with Emergency Braking
+                Control simulated by CARLA
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="img"><img src="assets/Path 2520.png" alt="" /></div>
+        <div class="content">
+          <div class="flex-item">
+            <div class="head">
+              <p>SUPPORT</p>
+            </div>
+            <div class="element">
+              <p>PAYMENT METHODS</p>
+            </div>
+            <div class="element">
+              <p>DELIVERY METHODS</p>
+            </div>
+            <div class="element">
+              <p>POSTAGE AND SHIPPING</p>
+            </div>
+            <div class="element">
+              <p>RETURNS AND COMPLAINTS</p>
+            </div>
+            <div class="element">
+              <p>WHOLESALE</p>
+            </div>
+            <div class="element">
+              <p>PRIVACY POLICY</p>
+            </div>
+            <div class="element">
+              <p>COOKIE POLICY</p>
+            </div>
+          </div>
+          <div class="gap"></div>
+          <div class="flex-item">
+            <p class="sub-head">NEWSLETTER</p>
+            <div class="head">
+              <p>DO YOU WANT EXTRA DISCOUNTS?</p>
+            </div>
+            <div class="element">
+              <p>
+                Read more about the processing of your personal data on the
+                <span>PRIVACY POLICY</span> page.
+              </p>
+            </div>
+
+            <div class="flex-element">
+              <div class="circle">
+                <p>10 <sup>USD</sup></p>
+              </div>
+              <div class="flex-element-gap"></div>
+              <p>
+                GET A 10 USD DISCOUNT BY SUBSCRIBING TO OUR MASOHISTIC
+                NEWSLETTER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const socket = io('http://127.0.0.1:3000');
+        
+        socket.on('connection',() => {
+            console.log('connected');
+        });
+
+        socket.on("update", (data) => {
+            console.log(data);
+            document.getElementById("speed").innerHTML = data.speed;
+            document.getElementById("status").innerHTML = data.status;
+            document.getElementById("errorCode").innerHTML = data.errorCode;
+
+        })
+        console.log(socket)
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,404 @@
+body {
+  margin: 0;
+  background-image: url("./assets/Rectangle1.png");
+}
+
+.main-container {
+  position: relative;
+  max-width: 2000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.top-left-img {
+  width: 75%;
+  max-width: 1200px;
+  min-width: 650px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-left-img img {
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  margin: 2.5rem 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -0.5rem;
+}
+
+.header .left,
+.header .right {
+  display: flex;
+  align-items: center;
+}
+
+.header .element {
+  margin: 0 0.5rem;
+}
+
+.header .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .left .icon .img {
+  max-width: 30px;
+}
+
+.header .right .icon .img {
+  max-width: 40px;
+}
+
+.header .icon .img img {
+  width: 100%;
+}
+
+.header .left .icon {
+  background: #170047;
+}
+
+.header .right .icon {
+  background: #ffffff;
+}
+
+.header p {
+  color: #170047;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.header .right .btn {
+  width: 120px;
+  height: 40px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  margin-top: 5rem;
+}
+
+.left-content p.head-content {
+  font-size: 4rem;
+  color: #170047;
+  font-weight: 700;
+  margin: 0;
+}
+
+.left-content p.body-content {
+  max-width: 500px;
+  text-align: center;
+  font-size: 2rem;
+  color: #170047;
+  margin: 1rem 0 2rem 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons .btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  border-width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.buttons .btn.dark {
+  background-color: #9f19ab;
+}
+
+.buttons .btn.dark p {
+  color: #ffffff;
+}
+
+.buttons .btn.light {
+  border: 2px solid #9f19ab;
+}
+
+.buttons .btn.light p {
+  color: #9f19ab;
+  font-weight: 600;
+}
+
+.buttons .btn p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.buttons .gap {
+  width: 2rem;
+}
+
+.car-image {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 600px;
+}
+
+.car-image .car {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.car-image .car-surroundings {
+  position: absolute;
+  top: -5rem;
+  right: 0;
+}
+
+.car-image .car-surroundings .img {
+  max-width: 700px;
+}
+
+.car-image .car .img {
+  max-width: 500px;
+}
+
+.car-image .car .img img,
+.car-image .car-surroundings .img img {
+  width: 100%;
+}
+
+.path2,
+.path3 {
+  position: relative;
+  height: 500px;
+}
+
+.path2 .img,
+.path3 .img {
+  width: 45%;
+  max-width: 1000px;
+  min-width: 800px;
+  position: absolute;
+  top: 0;
+}
+
+.path2 .img {
+  right: -200px;
+}
+
+.path3 .img {
+  left: -200px;
+}
+
+.path2 .img img {
+  width: 100%;
+}
+
+.path3 .img img {
+  width: 100%;
+}
+
+.circles-section {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.circles-section .circle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.circles-section .circle-section.end {
+  align-self: flex-end;
+}
+
+.circles-section .circle-section .head p {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.circles-section .circle-section .circle {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff;
+  background: #222568;
+  border-radius: 50%;
+}
+
+.circles-section .circle-section .circle p {
+  font-size: 4rem;
+  color: #ffffffff;
+  font-weight: 700;
+}
+
+.about-us .about-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us .about-head p {
+  font-size: 4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.about-us .about-head div {
+  height: 5px;
+  width: 150px;
+  background-color: #f3c598;
+}
+
+.about-us .flex-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.about-us .flex-section .img {
+  max-width: 800px;
+}
+
+.about-us .flex-section .img img {
+  width: 100%;
+}
+
+.about-us .flex-section .text {
+  max-width: 350px;
+}
+
+.about-us .flex-section p {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.footer {
+  position: relative;
+  padding-top: 350px;
+}
+
+.footer .img {
+  position: absolute;
+  bottom: -50px;
+  right: -300px;
+  left: -200px;
+  top: 0;
+}
+
+.footer .img img {
+  width: 100%;
+}
+
+.footer .content {
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.footer .flex-item {
+  max-width: 250px;
+}
+
+.footer .flex-item > * {
+  margin: 0.5rem 0;
+}
+
+.footer .flex-item .sub-head {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #170047;
+}
+
+.footer .flex-item .head p {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #170047;
+  margin: 0;
+}
+
+.footer .flex-item .head p {
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.footer .flex-item .element p {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.footer .flex-item .element p span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.footer .gap {
+  width: 200px;
+}
+
+.footer .flex-item .flex-element {
+  display: flex;
+  align-items: center;
+}
+
+.footer .flex-item .flex-element .circle {
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #292f33;
+  border-radius: 50%;
+}
+
+.footer .flex-item .flex-element .circle p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.footer .flex-item .flex-element .flex-element-gap {
+  width: 25px;
+}
+
+.footer .flex-item .flex-element p {
+  color: #170047;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
