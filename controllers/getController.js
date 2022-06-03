@@ -1,7 +1,7 @@
 module.exports = (req, res, next) => {
-  let speed = 150;
-  let errorCode = 100;
-  let status = 100;
+  let speed = "OFF";
+  let errorCode = "OFF";
+  let status = "OFF";
 
   res.render("index", {
     speed: speed,

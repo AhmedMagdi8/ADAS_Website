@@ -402,3 +402,11 @@ body {
   font-weight: 500;
   font-size: 0.85rem;
 }
+
+a {
+    text-decoration: none;
+}
+
+.buttons a:hover {
+    
+}

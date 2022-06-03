@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+const authMiddleware = require("./authMiddleware");
 
 
 app.use(express.urlencoded({
@@ -20,18 +21,12 @@ const server = app.listen(3000, () => {
     console.log("Server is running");
 });
 
-const io = require("./socket").init(server);
-
-io.on('connection', (socket) => {
-    console.log('connected  ' + socket.id);
-});
-
-
+require("./socket").init(server);
 
 const getController = require('./controllers/getController');
 const postController = require('./controllers/postController');
 
 app.get('/', getController);
-app.post('/', postController);
+app.post('/', authMiddleware, postController);
 
 

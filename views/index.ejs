@@ -9,7 +9,6 @@
     </script>
     <title>ADAS</title>
   </head>
-  <body>
     <div class="main-container">
       <div class="top-left-img">
         <img src="assets/Path21.png" alt="" />
@@ -27,7 +26,7 @@
             <div class="element"><p>About us</p></div>
           </div>
           <div class="right">
-            <div class="btn"><p>Login</p></div>
+            <!-- <div class="btn"><p>Login</p></div> -->
             <div class="element icon">
               <div class="img">
                 <img src="assets/astronaut.png" alt="" />
@@ -43,9 +42,9 @@
             Control simulated by CARLA
           </p>
           <div class="buttons">
-            <div class="btn dark"><p>START TRACKING</p></div>
+            <a id="track" class="btn dark" href="#monitor"><p>START TRACKING</p></a>
             <div class="gap"></div>
-            <div class="btn light"><p>LEARN MORE</p></div>
+            <a class="btn light"><p>LEARN MORE</p></a>
           </div>
         </div>
 
@@ -66,7 +65,7 @@
           <div class="img"><img src="assets/Path 459.png" alt="" /></div>
         </div>
 
-        <div class="circles-section">
+        <div id="monitor" class="circles-section">
           <div class="circle-section end">
             <div class="head">
               <p>Speed</p>
@@ -171,23 +170,7 @@
         </div>
       </div>
     </div>
-
-    <script>
-        const socket = io('http://127.0.0.1:3000');
-        
-        socket.on('connection',() => {
-            console.log('connected');
-        });
-
-        socket.on("update", (data) => {
-            console.log(data);
-            document.getElementById("speed").innerHTML = data.speed;
-            document.getElementById("status").innerHTML = data.status;
-            document.getElementById("errorCode").innerHTML = data.errorCode;
-
-        })
-        console.log(socket)
-
+    <script src="/js/index.js">
     </script>
   </body>
 </html>
